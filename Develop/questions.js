@@ -1,32 +1,102 @@
 var questions = [
     {
-        "question": "Q1",
+        "question": "What is the correct syntax for referring to an external script called \"abc.js\"",
         "options":  [
-            "1",
-            "2",
-            "3",
-            "4"
+            "<script name=\"abc.js\"",
+            "<script href=\"abc.js\"",
+            "<script src=\"abc.js\"",
+            "<script =\"abc.js\""
         ],
-        "answer": "1" 
+        "answer": "<script src=\"abc.js\"" 
     },
     {
-        "question": "Q2",
+        "question": "How do you write \"Hello World\" in an alert box?",
         "options":  [
-            "1",
-            "2",
-            "3",
-            "4"
+            "alert(\"Hello World\")",
+            "alertBox(\"Hello World\")",
+            "alertMsg(\"Hello World\")",
+            "msg(\"Hello World\")"
         ],
-        "answer": "1" 
+        "answer": "alert(\"Hello World\")" 
     },
     {
-        "question": "Q3",
+        "question": "Inside which HTML element do we put the JavaScript",
         "options":  [
-            "1",
-            "2",
-            "3",
-            "4"
+            "<js>",
+            "<script>",
+            "<javascript>",
+            "<scripting>"
         ],
-        "answer": "1" 
+        "answer": "<script>" 
+    },
+    {
+        "question": "How do you create a function in JavaScript",
+        "options":  [
+            "function = myFunction()",
+            "function myFunction()",
+            "function:myFunction()",
+            "function = \"myFunction()\""
+        ],
+        "answer": "function myFunction()" 
+    },
+    {
+        "question": "How do you call a function named \"myFunction\"",
+        "options":  [
+            "call myFunction()",
+            "call function myFunction()",
+            "myFunction()",
+            "function myFunction()"
+        ],
+        "answer": "myFunction()" 
+    },
+    {
+        "question": "JavaScript is interpreted by ____",
+        "options":  [
+            "Client",
+            "Server",
+            "Object",
+            "None of the above"
+        ],
+        "answer": "Client" 
+    },
+    {
+        "question": "What are variables used for in JavaScript Programs?",
+        "options":  [
+            "Varying randomly",
+            "Algebraic equations",
+            "Storing values",
+            "None of the above"
+        ],
+        "answer": "Storing values" 
+    },
+    {
+        "question": "Which of the following is not a valid JavaScript variable name?",
+        "options":  [
+            "MyFirstVariable",
+            "_my_first_variable",
+            "1variable",
+            "OneVariable"
+        ],
+        "answer": "1variable" 
+    },
+    {
+        "question": "q9",
+        "options":  [
+            "Client",
+            "Server",
+            "Object",
+            "None of the above"
+        ],
+        "answer": "Client" 
+    },
+    {
+        "question": "q10",
+        "options":  [
+            "Client",
+            "Server",
+            "Object",
+            "None of the above"
+        ],
+        "answer": "Client" 
     }
 ];

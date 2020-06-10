@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-top: 80px;
+    width: 100%;
+    height: 500px;
+    padding: 25px;
+    background-color: #efefefe6;
+    margin-bottom: 250px;
+}
+
+/* .card-body {
+    padding: 0px !important; /* Removes padding from card body text. Use of !important to override Bootstrap CSS
+ } */
+
+#quiz-title {
+    margin: 90px auto 30px auto;
+}
+
+#quiz-title-hide {
+    display: none;
+}
+
+#info {
+    text-align: center;
+    margin: 0px auto 0px auto;
+    width: 70%;
+}
+
+#info-hide{
+    display: none;
+}
+
+#highscores-link {
+    color:#4f4fad;
+}
+
+#highscores-link:hover {
+    color: #4f4fada8;
+}
+
+#start {
+    margin: 40px auto 60px auto;
+    width: 200px;
+    height: 80px;
+    background-color: #4f4fad;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    border:none;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: #4f4fada8;
+}
+
+#start-hide {
+    display: none;
+}
+
+#timer {
+   position:absolute;
+   top: 0px;
+   right: 0px;
+   padding: 25px;
+   font-size: 24px;
+   color: #4f4fad;
+}
+
+#highscores-link {
+    position: absolute;
+    font-size: 20px;
+    text-decoration: underline;
+}

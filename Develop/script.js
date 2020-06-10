@@ -7,6 +7,16 @@ const MAX_TIME_LIMIT = 300; // Unit seconds (5 minutes)
 var highscore = 0;
 
 // Functions
+
+// Hides the initial html elements when the quiz starts
+function hideDetails() { 
+    // $("#quiz-title").toggleClass('#quiz-title', '#quiz-title-hide'); 
+    $("#quiz-title").attr('id', 'quiz-title-hide');
+    $("#info").attr("id", "info-hide");
+    $("#start").attr("id", "start-hide");
+} 
+
+// When start button is clicked
 function onStartClick() {
     var counter = MAX_TIME_LIMIT;
     document.querySelector("#timer").innerHTML = counter;
@@ -19,16 +29,17 @@ function onStartClick() {
             clearInterval(interval);
         }
     }, 1000); //1000 ms = 1 seconds which is the interval between the function execution
-
-    startQuiz();
+    
+    hideDetails();
+    // startQuiz();
 }
+
 
 // Start execution
 var startBtn = document.querySelector("#start");
 startBtn.addEventListener("click", onStartClick);
 
 // console.log(questions);
-
 console.log(questions[0].question)
 console.log(questions[0].options)
 console.log(questions[0].answer)

@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Code Quiz</title>
+     <!-- Bootstrap v4.0.0 Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- External Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <button id="start">Start</button>
-    <p id="timer"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <h2 id="quiz-title">Coding Quiz Challenge</h2>
+                    <p id="info">Are you ready to take on this JavaScript quiz? The timer represents your score, the quicker you answer the questions, the more time you'll have left remaining. Be careful, answering incorrectly will remove a chunk from your timer.</p>
+                    <button id="start">START</button>
+                    <a id="highscores-link" href="highscores.html">Highscores</a>
+                    <p id="timer"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="questions.js"></script>  
     <script src="script.js"></script>
