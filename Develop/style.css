@@ -24,18 +24,10 @@ body {
     margin: 90px auto 30px auto;
 }
 
-#quiz-title-hide {
-    display: none;
-}
-
 #info {
     text-align: center;
     margin: 0px auto 0px auto;
     width: 70%;
-}
-
-#info-hide{
-    display: none;
 }
 
 #highscores-link {
@@ -62,10 +54,6 @@ body {
     background-color: #4f4fada8;
 }
 
-#start-hide {
-    display: none;
-}
-
 #timer {
    position:absolute;
    top: 0px;
@@ -80,3 +68,36 @@ body {
     font-size: 20px;
     text-decoration: underline;
 }
+
+#question {
+    margin: 90px auto 30px auto;
+    display:none;
+}
+
+#option1 {
+    display:none;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+#option2 {
+    display:none;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+#option3 {
+    display:none;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+#option4 {
+    display:none;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+
+
+

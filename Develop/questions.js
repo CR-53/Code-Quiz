@@ -80,23 +80,23 @@ var questions = [
         "answer": "1variable" 
     },
     {
-        "question": "q9",
+        "question": "What is a Boolean in JavaScript?",
         "options":  [
-            "Client",
-            "Server",
-            "Object",
-            "None of the above"
+            "A whole number",
+            "A decimal number",
+            "A true or fale statement",
+            "A container to store values"
         ],
-        "answer": "Client" 
+        "answer": "A true or fale statement" 
     },
     {
-        "question": "q10",
+        "question": "How do you write a comment in JavaScript?",
         "options":  [
-            "Client",
-            "Server",
-            "Object",
-            "None of the above"
+            "<!-- This is a comment -->",
+            "/* This is a comment */",
+            "// This is a comment //",
+            "_This is a comment_"
         ],
-        "answer": "Client" 
+        "answer": "// This is a comment //" 
     }
 ];

@@ -5,16 +5,50 @@ const MAX_TIME_LIMIT = 300; // Unit seconds (5 minutes)
 
 // Variables
 var highscore = 0;
+var questionIndex = 0;
 
 // Functions
 
+// Add click function to button
+    // Function needs to accept parameter
+        // Parameter is text of the button
+            // Inside the function check if value of parameter = answer of current question
+                // If = answer, display correct, != display wrong
+                    // Check if question index < question.length
+                        // If yes, display next question, if not, end quiz
+
+// endQuiz()
+    // Highscores
+        
+//Start quiz function
+function startQuiz() {
+    $("#question").attr('style', 'display:block;');
+    $("#option1").attr('style', 'display:block;');
+    $("#option2").attr('style', 'display:block;');
+    $("#option3").attr('style', 'display:block;');
+    $("#option4").attr('style', 'display:block;');
+
+    displayNextQuestion();
+}
+
 // Hides the initial html elements when the quiz starts
-function hideDetails() { 
-    // $("#quiz-title").toggleClass('#quiz-title', '#quiz-title-hide'); 
-    $("#quiz-title").attr('id', 'quiz-title-hide');
-    $("#info").attr("id", "info-hide");
-    $("#start").attr("id", "start-hide");
+function hideDetails() {  
+    $("#quiz-title").attr('style', 'display:none;');
+    $("#info").attr('style', 'display:none;');
+    $("#start").attr('style', 'display:none;');
 } 
+
+function displayNextQuestion() {
+    // Display quiz question and increments index to go to next question
+    var currentQuestion = questions[questionIndex];
+    questionIndex ++;
+    $("#question").html(currentQuestion.question);
+
+    $("#option1").text(currentQuestion.options[0]);
+    $("#option2").text(currentQuestion.options[1]);
+    $("#option3").text(currentQuestion.options[2]);
+    $("#option4").text(currentQuestion.options[3]);
+}
 
 // When start button is clicked
 function onStartClick() {
@@ -31,7 +65,7 @@ function onStartClick() {
     }, 1000); //1000 ms = 1 seconds which is the interval between the function execution
     
     hideDetails();
-    // startQuiz();
+    startQuiz();
 }
 
 
