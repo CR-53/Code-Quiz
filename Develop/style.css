@@ -16,10 +16,6 @@ body {
     margin-bottom: 250px;
 }
 
-/* .card-body {
-    padding: 0px !important; /* Removes padding from card body text. Use of !important to override Bootstrap CSS
- } */
-
 #quiz-title {
     margin: 90px auto 30px auto;
 }
@@ -70,34 +66,23 @@ body {
 }
 
 #question {
-    margin: 90px auto 30px auto;
+    margin: 90px auto 50px auto;
     display:none;
 }
 
-#option1 {
-    display:none;
-    margin-bottom:10px;
+.option {
+    display: none;
+    margin: 0px auto 22px auto;
     cursor: pointer;
+    width: 80%;
+    height: 40px;
+    background-color: #4f4fad;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    border:none;
 }
 
-#option2 {
-    display:none;
-    margin-bottom:10px;
-    cursor: pointer;
+.option:hover {
+    background-color: #4f4fada8;
 }
-
-#option3 {
-    display:none;
-    margin-bottom:10px;
-    cursor: pointer;
-}
-
-#option4 {
-    display:none;
-    margin-bottom:10px;
-    cursor: pointer;
-}
-
-
-
-
