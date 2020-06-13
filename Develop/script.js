@@ -6,12 +6,20 @@ const TIME_PENALTY = 20; // Unit: s. The amount reduced from timer when a questi
 const FEEDBACK_DISPLAY_TIME = 2000; // Unit: ms. The duration the feedback message shows on the screen
 
 // Variables
-var highscores = [];
 var questionIndex = 0;
 var counter = MAX_TIME_LIMIT;
 var interval;
 
+var highscores = JSON.parse(localStorage.getItem("highscores"));
+if (!highscores) {
+    highscores = [];
+}
+
 // Functions
+
+$("#start").on("click", function() {
+    onStartClick();
+});
 
 $(".option").on("click", function() {
 
@@ -45,26 +53,25 @@ $(".option").on("click", function() {
 });
 
 // Highscores
+$("#highscores-link").on("click", function() {
+    displayHighscores();
+});
+
 $("#submit-btn").on("click", function() {
-    var userName = $("#enter-name").text();
+    var userName = $("#enter-name").val();
+    console.log(userName);
     var scoreEntry = {
         "name": userName,
         "score": counter,
     }
     highscores.push(scoreEntry);
+    localStorage.setItem("highscores", JSON.stringify(highscores));
     displayHighscores();
 });
 
 // Display Highscores
-
 function displayHighscores() {
-    for (var i = 0; i < highscores.length; i++) {
-    
-        var li = document.createElement("li");
-        li.textContent = highscores[i];
-        li.setAttribute("data-index", i);
-        $("#score-list").appendChild(li);
-    }
+    window.location = 'highscores.html';
 }
 
 //Start quiz function
@@ -143,7 +150,3 @@ function resetTimer() {
     counter = MAX_TIME_LIMIT;
     $("#timer").text(counter);
 }
-
-// Start execution
-var startBtn = document.querySelector("#start");
-startBtn.addEventListener("click", onStartClick);
