@@ -86,3 +86,56 @@ body {
 .option:hover {
     background-color: #4f4fada8;
 }
+
+#feedback {
+    margin: 0px auto 0px auto;
+    font-size: 22px;
+}
+
+#quiz-end {
+    display: none;
+    margin: 90px auto 30px auto;
+}
+
+#end-info {
+    display: none;
+    text-align: center;
+    margin: 0px auto 0px auto;
+    width: 70%;
+}
+
+#enter-name {
+    display: none;
+    margin: 40px auto 0px auto;
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+}
+
+#submit-btn {
+    cursor: pointer;
+    display: none;
+    margin: 40px auto 60px auto;
+    width: 160px;
+    height: 120px;
+    background-color: #4f4fad;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border:none;
+}
+
+#score-display {
+    display: none;
+    margin: 10px auto 10px auto;
+    font-size: 18px;
+}
+
+#final-score {
+    display: none;
+    margin: 10px auto 10px auto;
+    font-size: 24px;
+    text-align: center;
+}
+
+

@@ -1,62 +1,72 @@
 // Todo: description
 
 // Constants
-const MAX_TIME_LIMIT = 300; // Unit seconds (5 minutes)
+const MAX_TIME_LIMIT = 300; // Unit: s. (5 minutes)
+const TIME_PENALTY = 20; // Unit: s. The amount reduced from timer when a question is answered incorrectly
+const FEEDBACK_DISPLAY_TIME = 2000; // Unit: ms. The duration the feedback message shows on the screen
 
 // Variables
-var highscore = 0;
+var highscores = [];
 var questionIndex = 0;
+var counter = MAX_TIME_LIMIT;
+var interval;
 
 // Functions
 
 $(".option").on("click", function() {
-    
-    console.log("answer picked " + (this).textContent);
-    console.log("correct answer " + (questions[questionIndex - 1].answer));
-    
-    var userChoice = (this).textConent; //might need to parse as string
-    var correctAnswer = questions[questionIndex - 1].answer; //might need to parse as string
+
+    var userChoice = (this).textContent;
+    var correctAnswer = questions[questionIndex - 1].answer; 
 
     if (userChoice === correctAnswer) {
-
-    // if ((this).textConent == questions[questionIndex - 1].answer) {
-        alert("Correct");
-    // }
+        $("#feedback").text("Correct!");
+        $("#feedback").attr('style', 'display:block;');
+        setTimeout(function() {
+            $("#feedback").attr('style', 'display:none;');
+        }, FEEDBACK_DISPLAY_TIME);
     }
 
     else {
-        alert("Wrong");
+        $("#feedback").text("Wrong!");
+        $("#feedback").attr('style', 'display:block;');
+        setTimeout(function() {
+            $("#feedback").attr('style', 'display:none;');
+        }, FEEDBACK_DISPLAY_TIME);
+        updateTimer(-TIME_PENALTY);
     }
 
-    // if  == (currentQuestion.answer)) {
-    //     alert("correct");
-    // }
+    if (questionIndex < questions.length) {
+        displayNextQuestion();
+    }
 
-    // else {
-    //     alert("wrong");
-    // }
-
-    displayNextQuestion();
-    // if (questionIndex <= questions.length) {
-    //     displayNextQuestion();
-    // }
-
-    // else {
-    //     alert("end quiz here");
-    // }
+    else {
+        endQuiz();
+    }
 });
 
-// Add click function to button
-    // Function needs to accept parameter
-        // Parameter is text of the button
-            // Inside the function check if value of parameter = answer of current question
-                // If = answer, display correct, != display wrong
-                    // Check if question index < question.length
-                        // If yes, display next question, if not, end quiz
+// Highscores
+$("#submit-btn").on("click", function() {
+    var userName = $("#enter-name").text();
+    var scoreEntry = {
+        "name": userName,
+        "score": counter,
+    }
+    highscores.push(scoreEntry);
+    displayHighscores();
+});
 
-// endQuiz()
-    // Highscores
-        
+// Display Highscores
+
+function displayHighscores() {
+    for (var i = 0; i < highscores.length; i++) {
+    
+        var li = document.createElement("li");
+        li.textContent = highscores[i];
+        li.setAttribute("data-index", i);
+        $("#score-list").appendChild(li);
+    }
+}
+
 //Start quiz function
 function startQuiz() {
     $("#question").attr('style', 'display:block;');
@@ -88,13 +98,10 @@ function displayNextQuestion() {
 
 // When start button is clicked
 function onStartClick() {
-    var counter = MAX_TIME_LIMIT;
-    document.querySelector("#timer").innerHTML = counter;
-    var interval = setInterval(function () {
+    resetTimer();
+    interval = setInterval(function () {
+        updateTimer(-1);
         //Stop the time loop when counter reaches 0
-        counter--;
-        console.log(counter);
-        document.querySelector("#timer").innerHTML = counter;
         if (counter < 1) {
             clearInterval(interval);
         }
@@ -104,12 +111,39 @@ function onStartClick() {
     startQuiz();
 }
 
+function endQuiz() {
+    // Pauses the timer
+    if (interval) {
+        clearInterval(interval);
+    }
+    // Sets the score
+    $("#final-score").text(counter);
+    // Hides the quiz question
+    $("#question").attr('style', 'display:none;');
+    $("#option1").attr('style', 'display:none;');
+    $("#option2").attr('style', 'display:none;');
+    $("#option3").attr('style', 'display:none;');
+    $("#option4").attr('style', 'display:none;');
+    $("#feedback").attr('style', 'display:none;');
+    // Displays the end screen
+    $("#quiz-end").attr('style', 'display:block;');
+    $("#end-info").attr('style', 'display:block;');
+    $("#enter-name").attr('style', 'display:block;');
+    $("#submit-btn").attr('style', 'display:block;');
+    $("#score-display").attr('style', 'display:block;');
+    $("#final-score").attr('style', 'display:block;');
+}
+
+function updateTimer(deltaTime) {
+    counter = counter + deltaTime;
+    $("#timer").text(counter);
+}
+
+function resetTimer() {
+    counter = MAX_TIME_LIMIT;
+    $("#timer").text(counter);
+}
 
 // Start execution
 var startBtn = document.querySelector("#start");
 startBtn.addEventListener("click", onStartClick);
-
-// console.log(questions);
-    // console.log(questions[0].question)
-    // console.log(questions[0].options)
-    // console.log(questions[0].answer)

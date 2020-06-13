@@ -17,6 +17,14 @@
             <div class="col-md-12">
                 <div class="card">
                     <h2 id="quiz-title">Coding Quiz Challenge</h2>
+                    <h2 id="quiz-end">Well Done</h2>
+                    <p id="end-info">You've completed the quiz! <br> Enter your name below and click submit to save your score.</p>
+                    <h4 id="score-display">
+                        <span>Your Score: </span>
+                        <span id="final-score"></span>
+                    </h4>
+                    <input id="enter-name" placeholder="Your Name"></input>
+                    <input id="submit-btn" type="submit" value="Submit Score">
                     <p id="info">Are you ready to take on this JavaScript quiz? The timer represents your score, the quicker you answer the questions, the more time you'll have left remaining. Be careful, answering incorrectly will remove a chunk from your timer.</p>
                     <button id="start">START</button>
                     <h4 id="question">Test question</h4>
@@ -24,6 +32,7 @@
                     <button class="option" id="option2">2</button>
                     <button class="option" id="option3">3</button>
                     <button class="option" id="option4">4</button>
+                    <p id="feedback"></p>
                     <a id="highscores-link" href="highscores.html">Highscores</a>
                     <p id="timer"></p>
                 </div>
