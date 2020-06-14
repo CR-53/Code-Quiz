@@ -29,3 +29,8 @@ Once the player has answered all the questions (and if there is still time left 
 
 ![Highscores](Assets/highscores.png)
 The highscores are saved using localStorage inside the player's browser and displayed as list items inside a unique list HTML element. The page also featuers a "Back" button, which will let take the player back to the Homescreen to let them play again and try and beat their highscore. There is also a "Clear" to clear all of the highscores. One thing I have not had a chance to attend to yet is getting the highscores list to display in order of high to low, however this is something I can definitely improve on when coming back to this code in the future.
+
+
+## License & copyright
+
+© Chris Roschi, University of Adelaide Coding Bootcamp
