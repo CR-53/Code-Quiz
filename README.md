@@ -13,3 +13,7 @@ I started this task by creating a homescreen for the quiz and a timer function. 
 ## Questions
 
 The next step I took was to create a new javascript file to hold all of my questions. I stored all the questions as objects inside of an array called "questions". Each question object had three values; question, options & answer. I used jQuery to hide and display different html elements throughout the quiz, including when changing question. I made sure that the player is presented with the next question reglardless if the selected the correct answer or an incorrect answer, as long as there were still questions left in the "questions" array.
+
+## Highscores
+
+Once the player has answered all the questions (and if there is still time left on the timer), the timer will stop and that will become the players final score. The player is then presented with an input field and a bit of info to enter their name. When the player hits submit, the Quiz will take their inputted name and final score and display it on a separate HTML page called Highscores inside a list. One thing I have not had a chance to attend to yet is getting the highscores list to display in order of high to low, however this is something I can definitely improve on when coming back to this code in the future.
