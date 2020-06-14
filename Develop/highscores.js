@@ -1,3 +1,4 @@
+// Function to load the highscores and adds them to a list
 function loadHighScores() {
     var highscoreList = document.querySelector("#score-list");
 
@@ -22,13 +23,16 @@ function backToQuiz() {
     window.location = 'index.html';
 }
 
+// Changes page to the quiz homepage
 $("#back").on("click", function() {
     backToQuiz();
 });
 
+// Clears the highscores
 $("#clear").on("click", function() {
     localStorage.clear();
     loadHighScores();
 });
 
+// Runs the loadHighScores function
 loadHighScores();

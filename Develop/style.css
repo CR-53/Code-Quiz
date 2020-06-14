@@ -16,8 +16,16 @@ body {
     margin-bottom: 250px;
 }
 
+#hs-card {
+    height: 800px;
+}
+
 #quiz-title {
     margin: 90px auto 30px auto;
+}
+
+#highscore-title {
+    margin: 40px auto 30px auto;
 }
 
 #info {
@@ -28,6 +36,10 @@ body {
 
 #highscores-link {
     color:#4f4fad;
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 #highscores-link:hover {
@@ -59,13 +71,6 @@ body {
    color: #4f4fad;
 }
 
-#highscores-link {
-    cursor: pointer;
-    position: absolute;
-    font-size: 20px;
-    text-decoration: underline;
-}
-
 #question {
     margin: 90px auto 50px auto;
     display:none;
@@ -75,7 +80,7 @@ body {
     display: none;
     margin: 0px auto 22px auto;
     cursor: pointer;
-    width: 80%;
+    width: 60%;
     height: 40px;
     background-color: #4f4fad;
     color: white;
@@ -95,7 +100,7 @@ body {
 
 #quiz-end {
     display: none;
-    margin: 90px auto 30px auto;
+    margin: 90px auto 20px auto;
 }
 
 #end-info {
@@ -107,7 +112,7 @@ body {
 
 #enter-name {
     display: none;
-    margin: 40px auto 0px auto;
+    margin: 0px auto 0px auto;
     width: 50%;
     height: 50px;
     padding: 10px;
@@ -116,9 +121,9 @@ body {
 #submit-btn {
     cursor: pointer;
     display: none;
-    margin: 40px auto 60px auto;
+    margin: 20px auto 0px auto;
     width: 160px;
-    height: 120px;
+    height: 80px;
     background-color: #4f4fad;
     color: white;
     font-size: 20px;
@@ -126,17 +131,62 @@ body {
     border:none;
 }
 
+#submit-btn:hover {
+    background-color: #4f4fada8;
+}
+
 #score-display {
     display: none;
-    margin: 10px auto 10px auto;
+    margin: 20px auto 10px auto;
     font-size: 18px;
 }
 
 #final-score {
     display: none;
-    margin: 10px auto 10px auto;
+    margin: 5px auto 10px auto;
     font-size: 24px;
     text-align: center;
 }
 
+#clear {
+    cursor: pointer;
+    margin: 20px auto 0px auto;
+    width: 120px;
+    height: 40px;
+    background-color: #4f4fad;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border:none;
+    position: relative;
+    top: 100px;
+}
 
+#clear:hover {
+    background-color: #4f4fada8;
+}
+
+#back {
+    cursor: pointer;
+    margin: 20px auto 0px auto;
+    width: 120px;
+    height: 40px;
+    background-color: #4f4fad;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border:none;
+    position: relative;
+    top: 100px;
+}
+
+#back:hover {
+    background-color: #4f4fada8;
+}
+
+#score-list {
+    font-size: 22px;
+    margin: 4px auto 2px auto;
+    list-style-type: none;
+    text-align: right;
+}
