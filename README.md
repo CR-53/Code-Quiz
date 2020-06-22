@@ -34,4 +34,4 @@ The highscores are saved using localStorage inside the player's browser and disp
 
 ## License & copyright
 
-© Chris Roschi, University of Adelaide Coding Bootcamp
+© Chris R, University of Adelaide Coding Bootcamp
